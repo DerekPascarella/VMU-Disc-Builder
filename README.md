@@ -58,6 +58,6 @@ Once all desired save files have been copied, launch the `vmu_disc_builder.exe` 
 
 <img src="https://github.com/DerekPascarella/VMU-Disc-Builder/blob/main/screenshot_1.png?raw=true">
 
-Once the CDI has been built, it is ready for use either via ODE or burned disc.
+Once the CDI has been built, it will be written to the `output` folder and ready for use, either via ODE or burned disc.
 
 <img src="https://github.com/DerekPascarella/VMU-Disc-Builder/blob/main/screenshot_2.png?raw=true">

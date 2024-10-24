@@ -11,7 +11,7 @@ VMU Disc Builder is currently at version [1.0](https://github.com/DerekPascarell
 - **Version 1.0 (2024-10-24)**
     - Initial release.
  
-## Words of Caution
+## Best Practices
 VMU Disc Builder leverages a custom English-language version of the <a href="https://www.dreamcast-talk.com/forum/viewtopic.php?f=52&t=14611#p151960">Dream Passport Web Browser</a> and as such is constrained to RAM limitations of both the browser software and the Dreamcast console itself. It's not recommended that users build a disc using hundreds or thousands of saves, as it will cause each indexed page to load very slowly.
 
 Instead, it's suggested that users curate a list of only the save files, mini-games, and icons that they wish to use.

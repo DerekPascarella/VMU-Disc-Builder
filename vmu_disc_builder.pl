@@ -160,18 +160,17 @@ foreach my $base_file_path (@save_files)
 		$save_is_icondata = 1;
 	}
 	
-	# Extract save description from VMS.
-	my $save_description = read_bytes_at_offset("save_files/" . $base_file_path . ".VMS", 32, 16);
-	
 	# Determine if VMS represents a minigame, where description data starts at decimal offset 512.
 	my $save_is_minigame = 0;
 	
 	if(!$save_is_icondata)
 	{
-		for(my $i = 0; $i < length($save_description); $i += 2)
+		my $save_description_candidate = read_bytes_at_offset("save_files/" . $base_file_path . ".VMS", 32, 16);
+
+		for(my $i = 0; $i < length($save_description_candidate); $i += 2)
 		{
 			# Store single byte.
-			my $byte = uc(substr($save_description, $i, 2));
+			my $byte = uc(substr($save_description_candidate, $i, 2));
 
 			# Check for null bytes (00 or FF) before the first five bytes (rough estimate).
 			if(($byte eq "00" || $byte eq "FF") && $i < 10)
@@ -199,6 +198,9 @@ foreach my $base_file_path (@save_files)
 
 	# Status message.
 	print "   - Extracting label and description from VMI/VMS pair...\n";
+
+	# Declare string variable used to hold file description.
+	my $save_description;
 
 	# VMS represents icon data.
 	if($save_is_icondata)

@@ -4,6 +4,8 @@ A utility for compiling a custom CDI containing Dreamcast VMU save files.
 
 It supports VMI/VMS pairs representing either game save data, mini-games, or icons.
 
+VMU Disc Builder leverages <a href="https://www.berlios.de/software/cdrtools/">mkisofs</a> and <a href="https://github.com/sizious/img4dc">cdi4dc</a> as helper utilities.
+
 ## Current Version
 VMU Disc Builder is currently at version [1.0](https://github.com/DerekPascarella/VMU-Disc-Builder/releases/download/1.0/VMU.Disc.Builder.v1.0.zip).
 

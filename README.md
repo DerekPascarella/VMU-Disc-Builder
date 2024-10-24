@@ -1,4 +1,4 @@
-<div align="center"><img src="https://github.com/DerekPascarella/VMU-Disc-Builder/blob/main/logo.png?raw=true"></div>
+<img src="https://github.com/DerekPascarella/VMU-Disc-Builder/blob/main/logo.png?raw=true">
 
 A utility for compiling a custom CDI containing Dreamcast VMU save files.
 

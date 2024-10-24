@@ -24,7 +24,7 @@ If a user sees a "Download failed" message after booting their disc, they must r
 1. Launch VMU Explorer.
 2. Click "File" -> "New VM".
 3. Click "File" -> "Import file".
-4. Select the original VMI file.
+4. Select the original problematic VMI file.
 5. Once imported, right-click the save file and select "Export".
 6. Either use the default filename, or give the VMI/VMS pair a custom filename not exceeding eight characters, not including the extension (e.g., 12345678.VMI and 12345678.VMS).
  

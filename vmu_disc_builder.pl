@@ -229,7 +229,7 @@ foreach my $base_file_path (@save_files)
 	if(has_icon_data("save_files/" . $base_file_path . ".VMS", $save_is_minigame, $save_is_icondata))
 	{
 		# Status message.
-		print "   - Valid icon found, exporting to GIF.\n";
+		print "   - Valid icon found, exporting to GIF...\n";
 
 		# Extract icon from VMS and write it to disc image data's "SAVES" folder.
 		extract_vms_icon_to_gif("save_files/" . $base_file_path . ".VMS", $save_is_minigame, $save_is_icondata);

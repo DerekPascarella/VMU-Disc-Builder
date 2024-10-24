@@ -52,7 +52,7 @@ After downloading the release package, extract the ZIP file to any folder of you
 └── vmu_disc_builder.exe
 ```
 
-Place VMI/VMS file pairs in the `save_files` folder. Note that nested subfolders is fully supported, and in fact encouraged when dealing with a large collection of saves where duplicate file names may be used.
+Place VMI/VMS file pairs in the `save_files` folder. Note that nested subfolders are fully supported, and in fact encouraged when dealing with a large collection of saves where duplicate file names may be used.
 
 Once all desired save files have been copied, launch the `vmu_disc_builder.exe` application. It will process all valid VMI/VMS pairs in the `save_files` folder and produce status updates throughout the build process.
 

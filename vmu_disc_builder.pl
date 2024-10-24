@@ -368,13 +368,13 @@ foreach my $key (keys %save_file_map)
 			$html .= "<tr>\n<td align=\"center\" valign=\"middle\">\n";
 
 			# Continue constructing HTML.
-			$html .= "<a href=\"SAVES/" . $entry->{base_file_path} . ".VMI\"><img border=\"0\" width=\"32\" height=\"32\" src=\"SAVES/" . $entry->{base_file_path} . "_ICON.GIF\"></a>";
+			$html .= "<a href=\"SAVES/" . uc($entry->{base_file_path}) . ".VMI\"><img border=\"0\" width=\"32\" height=\"32\" src=\"SAVES/" . uc($entry->{base_file_path}) . "_ICON.GIF\"></a>";
 
 			# Continue constructing HTML.
 			$html .= "</td>\n<td align=\"left\" valign=\"middle\">\n";
 
 			# Continue constructing HTML.
-			$html .= "<a href=\"SAVES/" . $entry->{base_file_path} . ".VMI\"><img border=\"0\" src=\"SAVES/" . $entry->{base_file_path} . "_DESC.GIF\"></a>";
+			$html .= "<a href=\"SAVES/" . uc($entry->{base_file_path}) . ".VMI\"><img border=\"0\" src=\"SAVES/" . uc($entry->{base_file_path}) . "_DESC.GIF\"></a>";
 
 			# Continue constructing HTML.
 			$html .= "</td>\n</tr>\n";

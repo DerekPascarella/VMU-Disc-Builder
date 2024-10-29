@@ -29,6 +29,7 @@ If a user sees a "Download failed" message after booting their disc, they must r
 4. Select the original problematic VMI file.
 5. Once imported, right-click the save file and select "Export".
 6. Either use the default filename, or give the VMI/VMS pair a custom filename not exceeding eight characters, not including the extension (e.g., `12345678.VMI` and `12345678.VMS`).
+7. Quit the application, choosing not to save.
  
 ## Usage
 VMU Disc Builder is designed to be as easy to use as possible.

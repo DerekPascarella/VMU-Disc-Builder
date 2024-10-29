@@ -820,7 +820,7 @@ sub generate_text_gif
 	# Draw each line of text, starting from the top.
 	my $y = 0; 
 
-	for(my $i = 0; $i < @lines; $i++)
+	for(my $i = 0; $i < @lines; $i ++)
 	{
 		my $line = $lines[$i];
 		my $metrics = $line_metrics[$i];

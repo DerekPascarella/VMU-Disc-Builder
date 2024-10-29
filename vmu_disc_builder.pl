@@ -300,7 +300,7 @@ foreach my $base_file_path (@save_files)
 	while(grep { $_ eq $new_filename } @{$save_file_map{$key}})
 	{
 		$new_filename = $save_filename . "_" . $counter;
-		$counter++;
+		$counter ++;
 	}
 
 	# Push a hash reference with both the save and base filenames to the array.

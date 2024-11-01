@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# VMU Disc Builder v1.0
+# VMU Disc Builder v1.1
 # A utility for compiling a custom CDI containing Dreamcast VMU save files.
 #
 # Written by Derek Pascarella (ateam)
@@ -16,7 +16,7 @@ use File::Path 'rmtree';
 use Fcntl ':seek';
 
 # Set version number.
-my $version = "1.0";
+my $version = "1.1";
 
 # Set header used in CLI messages.
 my $cli_header = "\nVMU Disc Builder v" . $version . "\nA utility for compiling a custom CDI containing Dreamcast VMU save files.\n\nWritten by Derek Pascarella (ateam)\n\n";
@@ -106,8 +106,17 @@ print $cli_header;
 # Status message.
 print scalar(@save_files) . " VMI/VMS pair(s) found in \"save_files\" folder.\n\n";
 
+# Prompt for optional dummy file.
+my $use_dummy_file;
+
+while($use_dummy_file !~ /^[YN]$/i)
+{
+	print "Add dummy file (recommended for those burning to disc)? (Y/N) ";
+	chop($use_dummy_file = lc(<STDIN>));
+}
+
 # Status message.
-print "Extracting disc image data...\n\n";
+print "\nExtracting disc image data...\n\n";
 
 # Extract disc image data.
 mkdir("output/data");
@@ -399,23 +408,27 @@ foreach my $key (keys %save_file_map)
 	write_file("output/data/DPWWW/" . uc($key) . ".HTM", $html);
 }
 
-# Status message.
-print "Creating dummy file...\n\n";
+# Create dummy file if specified by the user.
+if($use_dummy_file eq "y")
+{
+	# Status message.
+	print "Creating dummy file...\n\n";
 
-# Create dummy file in order to push data to the outside of the disc.
-my $total_size = 0;
+	# Create dummy file in order to push data to the outside of the disc.
+	my $total_size = 0;
 
-find(sub {
-	return if -d;
-	$total_size += -s;
-}, "output/data");
+	find(sub {
+		return if -d;
+		$total_size += -s;
+	}, "output/data");
 
-my $dummy_file_size = (550 * 1024 * 1024) - $total_size;
+	my $dummy_file_size = (550 * 1024 * 1024) - $total_size;
 
-open my $fh, '>', "output/data/0.0";
-seek($fh, $dummy_file_size - 1, SEEK_SET);
-print $fh "\0";
-close $fh;
+	open my $fh, '>', "output/data/0.0";
+	seek($fh, $dummy_file_size - 1, SEEK_SET);
+	print $fh "\0";
+	close $fh;
+}
 
 # Status message.
 print "Building disc image (this may take a while)...\n\n";

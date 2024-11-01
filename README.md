@@ -7,9 +7,11 @@ It supports VMI/VMS pairs representing either game save data, mini-games, or ico
 VMU Disc Builder leverages <a href="https://www.berlios.de/software/cdrtools/">mkisofs</a> and <a href="https://github.com/sizious/img4dc">cdi4dc</a> as helper utilities.
 
 ## Current Version
-VMU Disc Builder is currently at version [1.0](https://github.com/DerekPascarella/VMU-Disc-Builder/releases/download/1.0/VMU.Disc.Builder.v1.0.zip).
+VMU Disc Builder is currently at version [1.1](https://github.com/DerekPascarella/VMU-Disc-Builder/releases/download/1.1/VMU.Disc.Builder.v1.1.zip).
 
 ## Changelog
+- **Version 1.1 (2024-11-01)**
+    - Dummy file creation now optional, allowing ODE users to save storage space.
 - **Version 1.0 (2024-10-24)**
     - Initial release.
  
